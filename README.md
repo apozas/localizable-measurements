@@ -5,6 +5,10 @@ This is a repository containing the computational appendix of the article "*Clas
 
 The code is written in Mathematica and MATLAB.
 
+Files:
+
+  - [AllOneEbitSolutions.nb](https://github.com/apozas/localizable-measurements/blob/main/AllOneEbitSolutions.nb): Notebook that analytically finds all solutions to Equation 4 in the manuscript, giving all the two-qubit measurements that can be localized with one ebit in the finite-consumption Vaidman scheme.
+
 If you would like to cite this work, please use the following format:
 
 J. Pauwels, A. Pozas-Kerstjens, and N. Gisin, _Classification of joint quantum measurements based on entanglement cost of localization_, arXiv:2408.XXXXX
