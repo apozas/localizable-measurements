@@ -1,16 +1,21 @@
-%% PPT_SDP.m
-% This script implements SDP criterion for verifying minimal entanglement cost of Appendix D.1 in arXiv:XXXX.XXXXX
-% Requirements: YALMIP (https://yalmip.github.io), MOSEK (https://www.mosek.com), QETLAB (http://www.qetlab.com)
+% Computational appendix of arXiv:2408.XXXXX
+% 
+% Author: Jef Pauwels
+% This script implements SDP criterion for verifying minimal entanglement cost
+% of Appendix D
+% Requirements: YALMIP (https://yalmip.github.io)
+%               MOSEK (https://www.mosek.com)
+%               QETLAB (http://www.qetlab.com)
 
 % Define the measurement
 
 EJM = [[1-1i,2*1i,0,1+1i]/sqrt(8); [-1-1i,0,-2*1i,-1+1i]/sqrt(8); [1+1i,0,-2*1i,1-1i]/sqrt(8); [-1+1i,2*1i,0,-1-1i]/sqrt(8)]';
 Bell = [[1,0,0,1]/sqrt(2); [0,1,1,0]/sqrt(2); [0,1,-1,0]/sqrt(2); [1,0,0,-1]/sqrt(2)]';
-X = [.5 .5 .5 .5;.5 -.5 -.5 .5;0 1/sqrt(2) -1/sqrt(2) 0; -1/sqrt(2) 0 0 1/sqrt(2)];
-Y = [0 1/sqrt(2) -1/sqrt(2) 0;.5 -.5 -.5 .5;.5 .5 .5 .5;1/sqrt(2) 0 0 -1/sqrt(2)];
-Xi = [0 0 1i*sqrt(2) -1i*sqrt(2);sqrt(2) -sqrt(2) 0 0; 1 1 1 1; -1 -1 1 1]/2;
+tBSM = [.5 .5 .5 .5;.5 -.5 -.5 .5;0 1/sqrt(2) -1/sqrt(2) 0; -1/sqrt(2) 0 0 1/sqrt(2)];
+E2 = [0 1/sqrt(2) -1/sqrt(2) 0;.5 -.5 -.5 .5;.5 .5 .5 .5;1/sqrt(2) 0 0 -1/sqrt(2)];
+B2 = [0 0 1i*sqrt(2) -1i*sqrt(2);sqrt(2) -sqrt(2) 0 0; 1 1 1 1; -1 -1 1 1]/2;
 
-
+% Specify the measurement
 M = Xi;
 
 phi = MaxEntangled(2)*MaxEntangled(2)';
@@ -51,13 +56,9 @@ for c = 1:4
    end
 end
 
-% [Fd,objd,XX,y] = dualize(F,W)
-% solvesdp(Fd,-objd)
-
 ops=sdpsettings('solver','mosek','verbose',1, 'cachesolvers', 1); solvesdp(F,-W,ops);
-% 
- double(W)
+double(W)
 
 % Check if the measurement is separable
- N = double(N);
- IsSeparable(N(:,:,1)+0.000001*eye(16))
+N = double(N);
+IsSeparable(N(:,:,1)+0.000001*eye(16))
