@@ -1,4 +1,4 @@
-% Computational appendix of arXiv:2408.XXXXX
+% Computational appendix of arXiv:2408.00831
 % 
 % Author: Jef Pauwels
 % This script implements SDP criterion for verifying minimal entanglement cost

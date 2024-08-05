@@ -20,7 +20,7 @@ WindowFrame->Normal*)
 Notebook[{
 
 Cell[CellGroupData[{
-Cell["Computational appendix of arXiv:2408.XXXXX", "Title",
+Cell["Computational appendix of arXiv:2408.00831", "Title",
  CellChangeTimes->{{3.931573196301488*^9, 3.931573218387066*^9}, 
    3.9317551633741903`*^9},ExpressionUUID->"28172697-dbac-4fc5-bc4e-\
 6dbbf184906e"],
