@@ -1,3 +1,5 @@
+[![DOI](https://zenodo.org/badge/836580376.svg)](https://zenodo.org/doi/10.5281/zenodo.13222175)
+
 ## Code to accompany *[Classification of joint quantum measurements based on entanglement cost of localization](https://www.arxiv.org/abs/2408.00831)*
 #### Jef Pauwels, Alejandro Pozas-Kerstjens, Flavio del Santo, and Nicolas Gisin
 
