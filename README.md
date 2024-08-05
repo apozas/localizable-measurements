@@ -18,6 +18,9 @@ Files:
   - [AllOneEbitSolutions.nb](https://github.com/apozas/localizable-measurements/blob/main/AllOneEbitSolutions.nb): Notebook that analytically finds all solutions to Equation 4 in the manuscript, giving all the two-qubit measurements that can be localized with one ebit in the finite-consumption Vaidman scheme.
 
   - [AllThreeEbitSolutions.nb](https://github.com/apozas/localizable-measurements/blob/main/AllThreeEbitSolutions.nb): Notebook that analytically finds all solutions to Equation 5 in the manuscript, giving all the two-qubit measurements that can be localized with three ebits in the finite-consumption Vaidman scheme.
+
+  - [findUniqueBases.m](https://github.com/apozas/localizable-measurements/blob/main/findUniqueBases.m): Auxiliary script to identify representatives of measurements according to Definition 2 in the manuscript.
+
   - [PPT_SDP.m](https://github.com/apozas/localizable-measurements/blob/main/PPT_SDP.m): MATLAB script that checks whether a two-qubit measurement is localizable with $n$ ebits via the SDP criterion of appendix D.
 
   - [results](https://github.com/apozas/localizable-measurements/blob/main/results/): Folder containing the results as ``.mat`` files. In each of them ``knownM`` contains all the corresponding measurements.
