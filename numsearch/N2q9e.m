@@ -61,6 +61,6 @@ while 0==0
                 knownM(:,k,nbSolutions) = M(:,k) / exp(1i*phase);
             end
         end
-        save('nineEbitLocalizable.mat','nbTrial','nbSolutions','nbFound','dgEnt','knownM');
+        save('TwoPartiesNineEbits.mat','nbTrial','nbSolutions','nbFound','dgEnt','knownM');
     end
 end

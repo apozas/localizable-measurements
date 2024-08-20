@@ -65,6 +65,6 @@ while 0==0
                 knownM(:,k,nbSolutions) = M(:,k) / exp(1i*phase);
             end
         end
-        save('seventeenEbitLocalizable.mat','nbTrial','nbSolutions','nbFound','dgAEnt','dgBEnt','knownM');
+        save('ThreePartiesSeventeenEbits.mat','nbTrial','nbSolutions','nbFound','dgAEnt','dgBEnt','knownM');
     end
 end
